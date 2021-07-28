@@ -2,13 +2,14 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home</title>
 <style>
 * {box-sizing: border-box;}
 
 body { 
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  /* Hide side scroll */
+  overflow: hidden; 
 }
 
 .header {
@@ -48,7 +49,6 @@ body {
   float: right;
 }
 
-
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
@@ -60,42 +60,53 @@ body {
     float: none;
   }
 }
-img{
-  filter: blur(1px);
-  width: 100%;
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 .headline{
-  position: relative;
   text-align: center;
   color: white;
-}
-.center{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-
-
 </style>
 </head>
 <body>
 
 <div class="header">
-  <a href="#default" class="logo">TestSite</a>
+  <a href="#default" class="logo">CompanyLogo</a>
   <div class="header-right">
     <a class="active" href="index.html">Home</a>
     <a href="videos.html">Videos</a>
   </div>
-  <div class="headline">
-    <img src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80">
-    <div class="center"><h1>The possibilities are... ENDLESS
-    </h1><p>Imagine what could be possible.</p></div>
 </div>
 
-<div style="padding-left:20px">
-  
+
+
+<div class="bg">
+  <div class="headline">
+    <h1>The possibilities are... ENDLESS</h1>
+    <h3>Imagine what could be possible.</h3>
+  </div>
 </div>
   
   
