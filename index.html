@@ -5,11 +5,12 @@
 <style>
 * {box-sizing: border-box;}
 
+
 body { 
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   /* Hide side scroll */
-  overflow: hidden; 
+  /*overflow: hidden; */
 }
 
 .header {
@@ -87,7 +88,109 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.about{
+	
+    display:inline-block;
+    width:100%;
+    color:white;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
 
+}
+p{
+	font-size:200%;
+    text-align:center;
+}
+pre{
+	font-size:400%;
+    text-align:center;
+}
+.contenedor {
+  -webkit-perspective: 500px;
+  perspective: 500px;
+  perspective-origin: 50% 50%;
+}
+.cube, .cube .card{
+  height: 290px;
+  width: 290px;
+}
+.cube {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+ 
+  -webkit-transform: rotateX(-30deg) rotateY(30deg);
+  transform: rotateX(-30deg) rotateY(-30deg);
+ 
+  margin: 150px auto;
+ 
+  -webkit-animation: giro 20s infinite linear;
+  animation: giro 20s infinite linear;
+}
+.cube .card {
+  position: absolute;
+  border: 5px solid #ccc;
+  opacity: 0.85;
+  transition: 0.2s;
+}
+/*card frontal*/
+.cube .card:nth-child(1) {
+  -webkit-transform: translateZ(150px);
+  transform: translateZ(150px);
+}
+/*card posterior*/
+.cube .card:nth-child(2) {
+  -webkit-transform: rotateY(180deg) translateZ(150px);
+  transform: rotateY(180deg) translateZ(150px);
+}
+/*card izquierda*/
+.cube .card:nth-child(3) {
+  -webkit-transform: rotateY(-90deg) translateZ(150px);
+  transform: rotateY(-90deg) translateZ(150px);
+}
+/*card derecha*/
+.cube .card:nth-child(4) {
+  -webkit-transform: rotateY(90deg) translateZ(150px);
+  transform: rotateY(90deg) translateZ(150px);
+}
+/*card superior*/
+.cube .card:nth-child(5) {
+  -webkit-transform: rotateX(90deg) translateZ(150px);
+  transform: rotateX(90deg) translateZ(150px);
+}
+/*card inferior*/
+.cube .card:nth-child(6) {
+  -webkit-transform: rotateX(-90deg) translateZ(150px);
+  transform: rotateX(-90deg) translateZ(150px);
+}
+@-webkit-keyframes giro {
+    0% { -webkit-transform: rotateX(-45deg) rotateY(0deg); }
+    50% { -webkit-transform: rotateX(45deg) rotateY(360deg); }
+    100% { -webkit-transform: rotateX(-45deg) rotateY(720deg); }
+}
+ 
+@keyframes giro {
+    0% { transform: rotateX(-45deg) rotateY(0deg); }
+    50% { transform: rotateX(45deg) rotateY(360deg); }
+    100% { transform: rotateX(-45deg) rotateY(720deg); }
+}
+ 
+@-webkit-keyframes giro360 {
+    0% { -webkit-transform: rotateX(  0deg) rotateY(  0deg); }
+  100% { -webkit-transform: rotateX(360deg) rotateY(360deg); }
+}
+ 
+@keyframes giro360 {
+    0% { transform: rotateX(  0deg) rotateY(  0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+/* Pause animation on hover */
+.cube:hover{
+    animation-play-state: paused;
+}
+.cube:hover .card{
+   opacity: 1;
+   transition: 0.2s;
+}
 </style>
 </head>
 <body>
@@ -108,8 +211,49 @@ body, html {
     <h3>Imagine what could be possible.</h3>
   </div>
 </div>
+<div class="about"><h1>We make the research for you, so that you won't have to.</h1>
+<p>We have a wide selection of courses that will interest you for sure. Keep fit while gaining new skills. We have anywhere from yoga all the way to weight-lifting.<br> <pre>Join us now<br>you won't regret it.</pre></p>
+</div>
+<div>
+  
+</div> 
   
   
+<div class="contenedor" >
+   <div class="cube">
+      <div class="card">
+         <a href="#">
+         <img src="https://images.unsplash.com/photo-1594737626072-90dc274bc2bd?ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8ZXhlcmNpc2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" title="Soto y Caldevilla de Valdeón" alt="Soto y Caldevilla de Valdeón" height="290px" width="290px" >
+         </a>
+      </div>
+      <div class="card">
+         <a href="#">
+         <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZXhlcmNpc2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" title="Un poco de nieve en agosto" alt="Un poco de nieve en agosto" width="290px" height="290px">
+         </a>
+      </div>
+      <div class="card">
+         <a href="#">
+         <img src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZXhlcmNpc2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" title="Un rebeco" alt="Un rebeco" width="290px" height="290px">
+         </a>
+      </div>
+      <div class="card">
+         <a href="#">
+         <img src="https://images.unsplash.com/photo-1470468969717-61d5d54fd036?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGV4ZXJjaXNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" title="Posada de Valdeón" alt="Posada de Valdeón" width="290px" height="290px">
+         </a>
+      </div>
+      <div class="card">
+         <a href="#">
+         <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fGV4ZXJjaXNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" title="Refugio de Pantivalles" alt="Refugio de Pantivalles" width="290px" height="290px">
+         </a>
+      </div>
+      <div class="card">
+         <a href="#">
+         <img src="https://images.unsplash.com/photo-1589955791915-526198ae4ee9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fGV4ZXJjaXNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" title="Unas montañas" alt="Unas montañas" width="290px" height="290px">
+         </a>
+      </div>
+   </div>
+</div>  
+<div >Make sure to subscribe to jiahao youtube channel</div>
 
 </body>
 </html>
