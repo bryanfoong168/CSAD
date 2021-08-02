@@ -5,9 +5,61 @@
 <style>
 * {box-sizing: border-box;}
 
+/* footer */
+.inner-footer{
+margin: 0;
+padding: 0;
+background-color: #272727;
+}
+
+.quick-links{
+display: flex;
+width: 560px;
+height: 70px;
+margin: auto;
+}
+
+.quick-links ul{
+display: flex;
+}
+
+.quick-items{
+list-style: none;
+}
+
+.quick-items a{
+text-decoration: none;
+padding: 0px 15px;
+font-size:20;
+color: white;
+transition: all .25s;
+}
+
+.quick-items a:hover{
+color: #6cccc6;
+
+}
+
+.outer-footer{
+padding:10px;
+text-align: center;
+color: white;
+font-size: 18px;
+background-color: #3f3f3f;
+}
+
+.footer {
+  background: #303030;
+  color: #d3d3d3;
+  height: 25px;
+  position: sticky;
+  top: 100%;
+}
 
 body { 
+  min-height: 100vh;
   margin: 0;
+  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   /* Hide side scroll */
   /*overflow: hidden; */
@@ -253,7 +305,25 @@ pre{
       </div>
    </div>
 </div>  
-<div >Make sure to subscribe to jiahao youtube channel</div>
+
+<!-- footer-->
+<footer class="footer">
+  <div class="inner-footers">
+  <div class="quick-links">
+  <ul>
+    <li class="quick-items"><a ref="#">Home</a></li>
+    <li class="quick-items"><a ref="#">Tutorials</a></li>
+    <li class="quick-items"><a ref="#">About Us</a></li>
+    <li class="quick-items"><a ref="#">Donate</a></li>
+    <li class="quick-items"><a ref="#">Contact Us</a></li>
+  </ul>
+  </div>
+  </div>
+  <div class="outer-footer">
+    &copy; Designed by Mr Lai Jiahao
+  </div>
+</footer>
+<!-- //footer-->
 
 </body>
 </html>
