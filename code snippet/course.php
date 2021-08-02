@@ -11,6 +11,7 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="starStyle.css.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="Comment.css">
     </head>
     <style>
         .videoContainer{
@@ -21,6 +22,9 @@ and open the template in the editor.
             position: inherit;
             margin-left: auto;
             margin-right: auto;
+        }
+        #comment{
+            visibility: hidden;
         }
     </style>
     
@@ -102,6 +106,7 @@ function extractVideoID($url){
                 </div>
                     <script src="http://www.youtube.com/player_api"></script>
                     <script>
+                        
                         // create youtube player
                         var player;
                         function onYouTubePlayerAPIReady() {
@@ -128,26 +133,40 @@ function extractVideoID($url){
                             }
                         }
                         function doSomeAction(){
-                            alert("Video has ended");
+                            document.getElementById("comment").style.visibility = "visible";
                         }
                     </script>
                         <br>
                     
             </div>
-        <div class="starContainer">
+        
+        <div class="container" id="comment">
+                <h2>Leave Us a Comment</h2>
+                <form>
+                    <div class="starContainer">
                         <div class="rate">
-                        <input type="radio" id="star5" name="rate" value="5" />
-                        <label for="star5" title="text">5 stars</label>
-                        <input type="radio" id="star4" name="rate" value="4" />
-                        <label for="star4" title="text">4 stars</label>
-                        <input type="radio" id="star3" name="rate" value="3" />
-                        <label for="star3" title="text">3 stars</label>
-                        <input type="radio" id="star2" name="rate" value="2" />
-                        <label for="star2" title="text">2 stars</label>
-                        <input type="radio" id="star1" name="rate" value="1" />
-                        <label for="star1" title="text">1 star</label>
-                  </div>
-</div>
+                            <input type="radio" id="star5" name="rate" value="5"/>
+                            <label for="star5" title="text">5 stars</label>
+                            <input type="radio" id="star4" name="rate" value="4" />
+                            <label for="star4" title="text">4 stars</label>
+                            <input type="radio" id="star3" name="rate" value="3" />
+                            <label for="star3" title="text">3 stars</label>
+                            <input type="radio" id="star2" name="rate" value="2" />
+                            <label for="star2" title="text">2 stars</label>
+                            <input type="radio" id="star1" name="rate" value="1" required/>
+                            <label for="star1" title="text">1 star</label>
+                        </div>
+                    </div>
+                    <textarea placeholder='Add Your Comment' required></textarea>
+                    
+                    <div class="btn">
+                        <input type="submit" value='Comment' target="none">
+                        
+                    </div>
+                </form>
+            </div>
+        
+            <script src='plugin.js'></script>
             
         <?php } ?>
     
