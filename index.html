@@ -2,58 +2,147 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 * {box-sizing: border-box;}
 
 /* footer */
-.inner-footer{
-margin: 0;
-padding: 0;
-background-color: #272727;
+.footer{
+  background: #666;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 55px 50px;
 }
 
-.quick-links{
-display: flex;
-width: 560px;
-height: 70px;
-margin: auto;
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+  display: inline-block;
+  vertical-align: top;
 }
 
-.quick-links ul{
-display: flex;
+.footer .footer-left {
+width: 35%;
 }
 
-.quick-items{
-list-style: none;
+.footer h3 {
+  color: #fff;
+  font-size: 36px;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
 }
 
-.quick-items a{
-text-decoration: none;
-padding: 0px 15px;
-font-size:20;
-color: white;
-transition: all .25s;
+.footer h3 span {
+  color: lightseagreen;
 }
 
-.quick-items a:hover{
-color: #6cccc6;
-
+.footer .footer-company {
+  color: #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
 }
 
-.outer-footer{
-padding:10px;
-text-align: center;
-color: white;
-font-size: 18px;
-background-color: #3f3f3f;
+.footer .footer-center {
+  width: 35%;
 }
 
-.footer {
-  background: #303030;
-  color: #d3d3d3;
-  height: 100px;
-  position: sticky;
-  top: 100%;
+.footer .footer-center i {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  margin: 10px 15px;
+  vertical-align: middle;
+  background: #33383b;
+  font-size: 22px;
+}
+
+.footer .footer-center i.fa-envelope {
+  font-size: 18px;
+  line-height: 34px;
+}
+
+.footer .footer-center p{
+  display: inline-block;
+  color: #fff;
+  font-weight: normal;
+  vertical-align: middle;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+
+.footer .footer-center p a {
+  color: lightseagreen;
+  text-decoration: none;
+}
+
+.footer .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer .footer-links a:before {
+  content: " | ";
+  font-weight: normal;
+  font-size: 20px;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+  left: 0;
+}
+
+.footer .footer-links .link1:before{
+  content: none;
+}
+
+.footer .footer-right {
+  width: 20%;
+}
+
+.footer .footer-company-about{
+  line-height: 20px;
+  color: #92999f;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.footer .footer-company-about span {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.footer .footer-social {
+  margin-top: 25px;
+}
+
+.footer .footer-social a{
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  line-height: 36px;
+  color: #fff;
+  text-align: center;
+  margin-right: 3px;
+  margin-bottom: 5px;
 }
 
 body { 
@@ -310,19 +399,36 @@ pre{
 
 <!-- footer-->
 <footer class="footer">
-  <div class="inner-footers">
-  <div class="quick-links">
-  <ul>
-    <li class="quick-items"><a ref="#">Home</a></li>
-    <li class="quick-items"><a ref="#">Tutorials</a></li>
-    <li class="quick-items"><a ref="#">About Us</a></li>
-    <li class="quick-items"><a ref="#">Donate</a></li>
-    <li class="quick-items"><a ref="#">Contact Us</a></li>
-  </ul>
+  <div class="footer-left">
+    <h3>Best<span>Platform</span></h3>
+
+    <p class="footer-company">
+      Company Name @ 2021
+    </p>
   </div>
+  <div class="footer-center">
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p><span>FF-42, Cross Road</span> Vadodora, India</p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>+65 9111 1111</p>
+    </div>
+
+    <div>
+      <i class="fa fa-envolope"></i>
+      <p><a href="mailto:support@company.com">support@gmail.com</a></p>
+    </div>
   </div>
-  <div class="outer-footer">
-    &copy; Designed by Mr Lai Jiahao
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>About the website</span>
+      Designed to help elderly get some exercise done in the convience of their home.
+    </p>
+
+    
   </div>
 </footer>
 <!-- //footer-->
