@@ -288,7 +288,7 @@ function extractVideoID($url){
        
 <div class="container">
 
-    <h3 class="text-center">My Video Gallery</h3>
+    <h3 class="text-center" style="padding-bottom:50px;padding-top:30px">Courses</h3>
     <div class="row">
         <?php foreach ($arr_video_ids as $video) { ?>
             <?php
