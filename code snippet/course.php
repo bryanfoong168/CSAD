@@ -4,6 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<?php include 'server.php';?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -12,6 +13,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
         <link rel="stylesheet" href="Comment.css">
+        <script src='plugin.js'></script>
     </head>
     <style>
         .videoContainer{
@@ -72,8 +74,52 @@ and open the template in the editor.
     color: #c59b08;
 }
     </style>
+    
+    <style>
+        
+.container {
+    position: inherit;
+            margin-left: auto;
+            margin-right: auto;
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0
+}
+
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+  .container {
+      text-align: center;
+  }
+  .container img {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+}
+</style>
     <body>
         <?php
+        
         $video_id = $_GET["name"];
         
 $arr_video_ids = array(
@@ -89,17 +135,19 @@ function extractVideoID($url){
     preg_match($regExp, $url, $video);
     return $video[7];
 }
-?>
-        
-        
+            $sql = mysqli_query($db, "SELECT comments FROM `videos` WHERE video_id = '$video_id'");
 
+            
+?>
 
         <?php foreach ($arr_video_ids as $video) { ?>
             <?php
             #$video_id = extractVideoID($video);
             $video_thumbnail = getYouTubeThumbnailImage($video_id);
+            
             ?>
         
+            <!-- Video Container -->
             <div class="videoContainer">
                 <div id="player">
                     
@@ -140,9 +188,12 @@ function extractVideoID($url){
                     
             </div>
         
+        <!-- Form container -->
         <div class="container" id="comment">
                 <h2>Leave Us a Comment</h2>
-                <form>
+                <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" >
+                    <input style="display:none;" type="text" name="name" value="<?php echo $video_id ?>">
+                    <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <div class="starContainer">
                         <div class="rate">
                             <input type="radio" id="star5" name="rate" value="5"/>
@@ -157,18 +208,37 @@ function extractVideoID($url){
                             <label for="star1" title="text">1 star</label>
                         </div>
                     </div>
-                    <textarea placeholder='Add Your Comment' required></textarea>
+                    <textarea name="comments" placeholder='Add Your Comment' required></textarea>
                     
                     <div class="btn">
-                        <input type="submit" value='Comment' target="none">
-                        
+                        <input type="submit" value='Comment' name="save" target="none" onclick="location.href='videoGallery.php'">
                     </div>
                 </form>
             </div>
         
-            <script src='plugin.js'></script>
             
         <?php } ?>
+            <p class="commentsContainer" style="border: none;">Comment Section</p>
+            <?php
+            while($row = mysqli_fetch_array($sql)) {
+                 
+                echo '<br>';
+            
+            ?>
+            <!-- Comment Section -->
+            
+            <div class="videoContainer" style="align-items: center;margin-left: auto;
+    margin-right: auto;">
+                
+                <div class="commentsContainer">
+                    <p><?php echo $row['comments']; ?></p>
+                </div>
+            </div>
+            <!-- Spacing -->
+            <div><br></div>
+            <?php } ?>
+            
+            
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>

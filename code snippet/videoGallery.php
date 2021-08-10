@@ -14,6 +14,9 @@ and open the template in the editor.
     <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
 
     <style>
+        .checked {
+  color: orange;
+}
         .rate {
     position: inherit;
             margin-left: auto;
@@ -56,6 +59,7 @@ and open the template in the editor.
     
     <body>
         <?php
+        
 $arr_video_ids = array(
     'https://www.youtube.com/watch?v=Pzv_lUp3iOQ',
     'https://www.youtube.com/watch?v=zRtU8dpTEXg',
@@ -85,27 +89,51 @@ function extractVideoID($url){
     <div class="row">
         <?php foreach ($arr_video_ids as $video) { ?>
             <?php
-            
+            $db = mysqli_connect('localhost', 'root', '', 'database');
             $video_id = extractVideoID($video);
             $video_thumbnail = getYouTubeThumbnailImage($video_id);
+            $avg = mysqli_query($db, "SELECT ROUND(AVG(likes) ,0) AS 'average' FROM videos WHERE video_id = '$video_id'");
+
+            $row = mysqli_fetch_assoc($avg); 
+
+            $average = $row['average'];
+            
+            $checked5 = "";
+            $checked4 = "";
+            $checked3 = "";
+            $checked2 = "";
+            $checked1 = "";
+            switch($average){
+                case 5:
+                    $checked5 = "checked";
+                    
+                case 4:
+                    $checked4 = "checked";
+                case 3:
+                    $checked3 = "checked";
+                case 2:
+                    $checked2 = "checked";
+                case 1:
+                    $checked1 = "checked";
+            }
+            
+            
             ?>
+            
             <div class="col-md-4">
                 <div class="pb-2">
                     <form action="course.php" method="get">
                         <input style="display:none;" type="text" name="name" value="<?php echo $video_id ?>">
                         <input type="image" src="<?php echo $video_thumbnail; ?>" class="img-thumbnail" alt="Submit" name="name">
                     </form>
+                    
                     <div class="rate">
-                        <input type="radio" id="star5" name="rate" value="5" />
-                        <label for="star5" title="text">5 stars</label>
-                        <input type="radio" id="star4" name="rate" value="4" />
-                        <label for="star4" title="text">4 stars</label>
-                        <input type="radio" id="star3" name="rate" value="3" />
-                        <label for="star3" title="text">3 stars</label>
-                        <input type="radio" id="star2" name="rate" value="2" />
-                        <label for="star2" title="text">2 stars</label>
-                        <input type="radio" id="star1" name="rate" value="1" />
-                        <label for="star1" title="text">1 star</label>
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                            <span class="fa fa-star <?php echo $checked1?>"></span>
+                            <span class="fa fa-star <?php echo $checked2?>"></span>
+                            <span class="fa fa-star <?php echo $checked3?>"></span>
+                            <span class="fa fa-star <?php echo $checked4?>"></span>
+                            <span class="fa fa-star <?php echo $checked5?>"></span>
                       </div>
                 </div>
             </div>
