@@ -287,13 +287,7 @@ function extractVideoID($url){
         
        
 <div class="container">
-<div class="header">
-  <a href="#default" class="logo" style="padding: 0px; margin-left:10px;"><img src="images/barbell64px.png" alt="logo" style="height: 40px; width: 40px;"> Lifestyle Assistant</a>
-  <div class="header-right">
-    <a class="active" href="index.html">Home</a>
-    <a href="videoGallery.php">Videos</a>
-  </div>
-</div>
+
     <h3 class="text-center">My Video Gallery</h3>
     <div class="row">
         <?php foreach ($arr_video_ids as $video) { ?>
