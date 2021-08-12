@@ -68,7 +68,7 @@ width: 35%;
   line-height: 36px;
   margin: 10px 15px;
   vertical-align: middle;
-  background: #33383b;
+  background: #fff;
   font-size: 22px;
 }
 
@@ -349,10 +349,10 @@ function extractVideoID($url){
 <!-- footer-->
 <footer class="footer">
   <div class="footer-left">
-    <h3>Best<span>Platform</span></h3>
+  <a href="#default" class="logo" style="padding: 0px; margin-left:10px;"><img src="images/barbell64px.png" alt="logo" style="height: 40px; width: 40px;"></a>
 
     <p class="footer-company">
-      Company Name @ 2021
+    Lifestyle Assistant @ 2021
     </p>
   </div>
   <div class="footer-center">
@@ -368,7 +368,13 @@ function extractVideoID($url){
 
     <div>
       <i class="fa fa-envelope"></i>
-      <p><a href="mailto:support@company.com">support@gmail.com</a></p>
+      <p><a href="mailto:support@company.com" style="
+        color: inherit !important;
+          text-decoration: none !important;
+          font-size: inherit !important;
+          font-family: inherit !important;
+          font-weight: inherit !important;
+          line-height: inherit !important;">support@gmail.com</a></p>
     </div>
   </div>
   <div class="footer-right">
