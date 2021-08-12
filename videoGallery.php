@@ -380,7 +380,7 @@ function extractVideoID($url){
   <div class="footer-right">
     <p class="footer-company-about">
       <span>About the website</span>
-      Designed to help elderly get some exercise done in the convience of their home.
+      Designed to help elderly get some exercise done in the convenience of their home.
     </p>
 
     
