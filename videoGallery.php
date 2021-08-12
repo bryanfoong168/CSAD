@@ -288,12 +288,12 @@ width: 35%;
         <?php
         
 $arr_video_ids = array(
-    'https://www.youtube.com/watch?v=Pzv_lUp3iOQ',
-    'https://www.youtube.com/watch?v=zRtU8dpTEXg',
-    'https://www.youtube.com/watch?v=EfSfLyeREMc',
-    'https://www.youtube.com/watch?v=C-nypyy4pLg',
-    'https://www.youtube.com/watch?v=OJpMT3odXtQ',
-    'https://www.youtube.com/watch?v=WBnzOyBVwdg',
+    'https://www.youtube.com/watch?v=gC_L9qAHVJ8',
+    'https://www.youtube.com/watch?v=UItWltVZZmE',
+    'https://www.youtube.com/watch?v=ml6cT4AZdqI',
+    'https://www.youtube.com/watch?v=PvEnWsPrL4w',
+    'https://www.youtube.com/watch?v=UBMk30rjy0o',
+    'https://www.youtube.com/watch?v=EfJ4aB_enVE',
 );
     
  
@@ -312,9 +312,9 @@ function extractVideoID($url){
 
 
 <div class="header">
-  <a href="#default" class="logo" style="padding: 0px; margin-left:10px;"><img src="images/barbell64px.png" alt="logo" style="height: 40px; width: 40px;"> Lifestyle Assistant</a>
+  <a href="index.php" class="logo" style="padding: 0px; margin-left:10px; font-family: Arial, Helvetica, sans-serif;"><img src="images/barbell64px.png" alt="logo" style="height: 40px; width: 40px;"> Lifestyle Assistant</a>
   <div class="header-right">
-    <a class="active" href="index.html">Home</a>
+    <a class="active" href="index.php">Home</a>
     <a href="videoGallery.php">Videos</a>
   </div>
 </div>
@@ -384,7 +384,7 @@ function extractVideoID($url){
 <!-- footer-->
 <footer class="footer">
   <div class="footer-left">
-  <a href="#default" class="logo" style="padding: 0px; margin-left:10px;"><img src="images/barbell64px.png" alt="logo" style="height: 40px; width: 40px;"></a>
+  <a href="index.php" class="logo" style="padding: 0px; margin-left:10px;"><img src="images/barbell64px.png" alt="logo" style="height: 40px; width: 40px;"></a>
 
     <p class="footer-company">
     Lifestyle Assistant @ 2021
