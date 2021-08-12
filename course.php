@@ -348,9 +348,9 @@ width: 35%;
     <body>
 
     <div class="header">
-  <a href="index.php" class="logo" style="padding: 0px; margin-left:10px; font-family: Arial, Helvetica, sans-serif;"><img src="images/barbell64px.png" alt="logo" style="height: 40px; width: 40px;"> Lifestyle Assistant</a>
+  <a href="#default" class="logo" style="padding: 0px; margin-left:10px;"><img src="images/barbell64px.png" alt="logo" style="height: 40px; width: 40px;"> Lifestyle Assistant</a>
   <div class="header-right">
-    <a class="active" href="index.php">Home</a>
+    <a class="active" href="index.html">Home</a>
     <a href="videoGallery.php">Videos</a>
   </div>
 </div>
@@ -385,11 +385,8 @@ function extractVideoID($url){
             $video_thumbnail = getYouTubeThumbnailImage($video_id);
             
             ?>
-        <div style="display: flex; margin: auto; font-size:36px; color: black;">
-            <p style="position: inherit;margin-left: auto;margin-right: auto;">Please leave a review at the end of this course</p>
-        </div>
+        
             <div class="videoContainer">
-                
                 <div id="player">
                     
                 </div>
@@ -459,7 +456,7 @@ function extractVideoID($url){
             <script src='plugin.js'></script>
             
         <?php } ?>
-                        <p class="commentsContainer" style="border: none; background-color: #eee;">Comment Section</p>
+                        <p class="commentsContainer" style="border: none;">Comment Section</p>
 
             <?php
             while($row = mysqli_fetch_array($sql)) {
@@ -468,9 +465,9 @@ function extractVideoID($url){
             
             ?>
              <div class="videoContainer" style="align-items: center;margin-left: auto;
-    margin-right: auto; ">
+    margin-right: auto;">
                 
-                 <div class="commentsContainer" style="background-color: #eee;">
+                <div class="commentsContainer">
                     <p><?php echo $row['comments']; ?></p>
                 </div>
             </div>
@@ -481,7 +478,7 @@ function extractVideoID($url){
             <!-- footer-->
 <footer class="footer">
   <div class="footer-left">
-  <a href="index.php" class="logo" style="padding: 0px; margin-left:10px;"><img src="images/barbell64px.png" alt="logo" style="height: 40px; width: 40px;"></a>
+  <a href="#default" class="logo" style="padding: 0px; margin-left:10px;"><img src="images/barbell64px.png" alt="logo" style="height: 40px; width: 40px;"></a>
 
     <p class="footer-company">
     Lifestyle Assistant @ 2021
