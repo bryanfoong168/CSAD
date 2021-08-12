@@ -13,8 +13,206 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
         <link rel="stylesheet" href="Comment.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <style>
+
+.footer{
+  background: #666;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 55px 50px;
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer .footer-left {
+width: 35%;
+}
+
+.footer h3 {
+  color: #fff;
+  font-size: 36px;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+}
+
+.footer h3 span {
+  color: lightseagreen;
+}
+
+.footer .footer-company {
+  color: #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+}
+
+.footer .footer-center {
+  width: 35%;
+}
+
+.footer .footer-center i {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  margin: 10px 15px;
+  vertical-align: middle;
+  background: #fff;
+  font-size: 22px;
+}
+
+.footer .footer-center i.fa-envelope {
+  font-size: 18px;
+  line-height: 34px;
+}
+
+.footer .footer-center p{
+  display: inline-block;
+  color: #fff;
+  font-weight: normal;
+  vertical-align: middle;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+
+.footer .footer-center p a {
+  color: lightseagreen;
+  text-decoration: none;
+}
+
+.footer .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer .footer-links a:before {
+  content: " | ";
+  font-weight: normal;
+  font-size: 20px;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+  left: 0;
+}
+
+.footer .footer-links .link1:before{
+  content: none;
+}
+
+.footer .footer-right {
+  width: 20%;
+}
+
+.footer .footer-company-about{
+  line-height: 20px;
+  color: #92999f;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.footer .footer-company-about span {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.footer .footer-social {
+  margin-top: 25px;
+}
+
+.footer .footer-social a{
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  line-height: 36px;
+  color: #fff;
+  text-align: center;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+        .header {
+  overflow: hidden;
+  background-color: #666;
+  padding: 20px 10px;
+  color:white;
+}
+
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+
+ 
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+        body{
+            background:#D3D3D3;
+            overflow-y:scroll;
+        }
+        .checked {
+  color: orange;
+}
+
+
         .videoContainer{
             display: flex;
             margin: auto;
@@ -113,6 +311,14 @@ and open the template in the editor.
 }
 </style>
     <body>
+
+    <div class="header">
+  <a href="#default" class="logo" style="padding: 0px; margin-left:10px;"><img src="images/barbell64px.png" alt="logo" style="height: 40px; width: 40px;"> Lifestyle Assistant</a>
+  <div class="header-right">
+    <a class="active" href="index.html">Home</a>
+    <a href="videoGallery.php">Videos</a>
+  </div>
+</div>
         <?php
         
         $video_id = $_GET["name"];
@@ -233,6 +439,48 @@ function extractVideoID($url){
             <!-- Spacing -->
             <div><br></div>
             <?php } ?>
+
+            <!-- footer-->
+<footer class="footer">
+  <div class="footer-left">
+  <a href="#default" class="logo" style="padding: 0px; margin-left:10px;"><img src="images/barbell64px.png" alt="logo" style="height: 40px; width: 40px;"></a>
+
+    <p class="footer-company">
+    Lifestyle Assistant @ 2021
+    </p>
+  </div>
+  <div class="footer-center">
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p><span>500 Dover Road</span> Singapore 139651</p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>+65 9111 1111</p>
+    </div>
+
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="mailto:support@company.com" style="
+        color: inherit !important;
+          text-decoration: none !important;
+          font-size: inherit !important;
+          font-family: inherit !important;
+          font-weight: inherit !important;
+          line-height: inherit !important;">support@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>About the website</span>
+      Designed to help elderly get some exercise done in the convience of their home.
+    </p>
+
+    
+  </div>
+</footer>
+<!-- //footer-->
             
             
     
