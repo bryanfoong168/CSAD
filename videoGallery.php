@@ -86,7 +86,7 @@ width: 35%;
 }
 
 .footer .footer-company {
-  color: #222;
+  color: white;
   font-size: 14px;
   font-weight: normal;
   margin: 0;
