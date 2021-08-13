@@ -323,7 +323,7 @@ function extractVideoID($url){
        
 <div class="container">
 
-    <h3 class="text-center" style="padding-bottom:50px;padding-top:30px;font-weight: bold">Courses</h3>
+    <h3 class="text-center" style="padding-bottom:50px;padding-top:30px;font-weight: bold">Videos</h3>
     <div class="row">
         <?php foreach ($arr_video_ids as $video) { ?>
             <?php
@@ -413,7 +413,7 @@ function extractVideoID($url){
     </div>
   </div>
   <div class="footer-right">
-    <p class="footer-company-about">
+      <p class="footer-company-about" style="text-align: center;">
       <span>About the website</span>
       Designed to help elderly get some exercise done in the convenience of their home.
     </p>

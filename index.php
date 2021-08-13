@@ -486,7 +486,7 @@ background: linear-gradient(90deg, rgba(234,243,15,1) 0%, rgba(50,241,113,1) 35%
   <div class="footer-center">
     <div>
       <i class="fa fa-map-marker"></i>
-      <p><span>500 Dover Road</span> Singapore 139651</p>
+      <p style="text-align: left;"><span>500 Dover Road</span> Singapore 139651</p>
     </div>
 
     <div>

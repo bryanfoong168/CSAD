@@ -386,7 +386,7 @@ function extractVideoID($url){
             
             ?>
         <div style="display: flex; margin: auto; font-size:36px; color: black;">
-            <p style="position: inherit;margin-left: auto;margin-right: auto;">Please leave a review at the end of this course</p>
+            <p style="position: inherit;margin-left: auto;margin-right: auto;">Please leave a review at the end of this video</p>
         </div>
             <div class="videoContainer">
                 
@@ -510,7 +510,7 @@ function extractVideoID($url){
     </div>
   </div>
   <div class="footer-right">
-    <p class="footer-company-about">
+      <p class="footer-company-about" style="text-align: center;">
       <span>About the website</span>
       Designed to help elderly get some exercise done in the convenience of their home.
     </p>
