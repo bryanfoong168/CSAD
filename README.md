@@ -1,1 +1,1 @@
-http://cord-cutter.net:8080/get.php?username=fenesse01@yahoo.com&password=hREE85bquW&type=m3u_plus
+http://86.107.179.250:80/get.php?username=yilmaz9199&password=uEEnqT7P2L&type=m3u
