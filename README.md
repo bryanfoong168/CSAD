@@ -5,3 +5,5 @@ http://86.107.179.250:80/get.php?username=cantekin&password=A9siKZJU86&type=m3u_
 http://underdogg.loginto.me:2096/get.php?username=os6613&password=2517684390&type=m3u_plus
 
 http://nocable.cc:8080/get.php?username=larrybarnard@yahoo.ca&password=j64jgaSHRf&type=m3u
+
+http://underdogg.loginto.me:2096/get.php?username=GBowie1&password=0128593467&type=m3u_plus
